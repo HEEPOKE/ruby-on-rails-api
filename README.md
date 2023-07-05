@@ -3,6 +3,10 @@
 ## How Create DB
 
 ```bash
+docker create network Heepoke
+```
+
+```bash
 docker compose up -d
 ```
 
@@ -18,8 +22,20 @@ cp .env.example .env
 bundle install
 ```
 
-## How to run 
+## How To Run 
 
 ```bash
 rails server
+```
+
+## How To Add Table
+
+```bash
+rails generate migration --name--
+```
+
+## Migrate DB
+
+```bash
+rails db:migrate
 ```
