@@ -6,7 +6,8 @@ class UserService
   end
 
   def create_user(params)
-    UserModel.create(params)
+    user = UserModel.create(params)
+    user.reload
   end
 
   def find_user(id)
@@ -18,8 +19,9 @@ class UserService
     user.reload
   end
 
-  def delete_user(user)
-    user.destroy
+  def delete_user(id)
+    user = UserModel.find_by(id: id)
+    user.destroy if user
   end
 
 end
