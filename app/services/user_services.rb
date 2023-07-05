@@ -20,8 +20,7 @@ class UserService
   end
 
   def delete_user(id)
-    user = UserModel.find_by(id: id)
-    user.destroy if user
+    user.destroy
   end
 
 end
